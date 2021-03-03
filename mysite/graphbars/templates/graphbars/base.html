@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='content' name='content'>
+        {% block content %}
+        {% endblock %}
+    </div>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <script>
+        Highcharts.chart('container', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Historic World Population by Region'
+            },
+            xAxis: {
+                categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania']
+            },
+            series: [{
+                name: 'Year 1800',
+                data: [107, 31, 635, 203, 105]
+            }, {
+                name: 'Year 1900',
+                data: [133, 156, 947, 408, 200]
+            }, {
+                name: 'Year 2012',
+                data: [1052, 954, 4250, 740, 500]
+            }]
+        });
+    </script>
+</body>
+</html>
