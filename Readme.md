@@ -1,4 +1,9 @@
-<center>Django App<center>
+---
+title: 'Django App'
+date: '2021-03-21'
+author: 'Pranta Barua'
+description: 'Graphical View of Data'
+---
 
 <h1>step1 : create virtualenv <h1>
 <h1>step2 : Activate virtual env<h1>
