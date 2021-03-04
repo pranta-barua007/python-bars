@@ -21,13 +21,6 @@ def index(response):
     teProj= Department.objects.get(name="te").project_set.count()
     meProj= Department.objects.get(name="me").project_set.count()
     
-    # student = {
-    #     "cse": cse.student_set.count(),
-    #     "eee": eee.student_set.count(),
-    #     "ce": ce.student_set.count(),
-    #     "te": te.student_set.count(),
-    #     "me": me.student_set.count()
-    # }
     return render(response, 'graphbars/graph.html', {
         "cseStd":cseStd, 
         "eeeStd":eeeStd,
