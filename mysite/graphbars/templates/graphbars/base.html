@@ -13,25 +13,43 @@
     </div>
     <script src="https://code.highcharts.com/highcharts.src.js"></script>
     <script>
+            let cseStd = {{cseStd}}
+            let eeeStd = {{eeeStd}}
+            let ceStd = {{ceStd}}
+            let teStd = {{teStd}}
+            let meStd = {{meStd}}
+
+            let cseTeac = {{cseTeac}}
+            let eeeTeac = {{eeeTeac}}
+            let ceTeac = {{ceTeac}}
+            let teTeac = {{teTeac}}
+            let meTeac = {{meTeac}}
+
+            let cseProj = {{cseProj}}
+            let eeeProj = {{eeeProj}}
+            let ceProj = {{ceProj}}
+            let teProj = {{teProj}}
+            let meProj = {{meProj}}
+
         Highcharts.chart('container', {
             chart: {
                 type: 'column'
             },
             title: {
-                text: 'Historic World Population by Region'
+                text: 'University Analysis'
             },
             xAxis: {
-                categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania']
+                categories: ['CSE', 'EEE', 'CE', 'TE', 'ME']
             },
             series: [{
-                name: 'Year 1800',
-                data: [107, 31, 635, 203, 105]
+                name: 'Students',
+                data: [cseStd, eeeStd, ceStd, teStd, meStd]
             }, {
-                name: 'Year 1900',
-                data: [133, 156, 947, 408, 200]
+                name: 'Teachers',
+                data: [cseTeac, eeeTeac, ceTeac, teTeac, meTeac]
             }, {
-                name: 'Year 2012',
-                data: [1052, 954, 4250, 740, 500]
+                name: 'Projects',
+                data: [cseProj, eeeProj, ceProj, teProj, meProj]
             }]
         });
     </script>
