@@ -1,0 +1,54 @@
+{% extends 'graphbars/base.html' %}  <!-- template inheritance -->
+
+{% block title %}Add items{% endblock %}
+
+{% block content %} 
+    <form method='POST' action='/add/'>
+        {% csrf_token %}
+        <label for="dep">Choose a Department:</label>
+        <select name="dep" id="dep">
+            {% for item in getDep.all %}
+                <option value="{{item.name}}">{{item.name}}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="studentName">Type Student Name: </label>
+        <input type="text" name="studentName" required> 
+        <br>
+        <label for="studentGender">Select Student Gender: </label>
+        <input type="radio" name="studentGender" value="male" required>Male 
+        <input type="radio" name="studentGender" value="female" required>Female
+        <br>
+        <input type='submit' name='addInfo' value="Add Student">
+    </form>
+    <form method='POST' action='/add/'>
+        {% csrf_token %}
+        <hr>
+        <label for="dep">Choose a Department:</label>
+        <select name="dep" id="dep">
+            {% for item in getDep.all %}
+                <option value="{{item.name}}">{{item.name}}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="teacherName">Type Teacher Name: </label>
+        <input type="text" name="teacherName" required> 
+        <br>
+        <input type='submit' name='addInfo' value="Add Teacher">
+    </form>
+    <form method='POST' action='/add/'>
+        {% csrf_token %}
+        <hr>
+        <label for="dep">Choose a Department:</label>
+        <select name="dep" id="dep">
+            {% for item in getDep.all %}
+                <option value="{{item.name}}">{{item.name}}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="projectName">Type Project Name: </label>
+        <input type="text" name="projectName" required> 
+        <br>
+        <input type='submit' name='addInfo' value="Add Project">
+    </form>
+{% endblock %}
